@@ -1,8 +1,9 @@
+
 import javax.swing.JFrame;
 
 public class Runner {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Costume Animals");
+        JFrame frame = new JFrame("Student Schedules");
         Screen screen = new Screen();
 
         frame.add(screen);
