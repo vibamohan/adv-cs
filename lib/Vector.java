@@ -1,5 +1,3 @@
-
-
 public class Vector<E> {
     private Object[] list;
     private int size;

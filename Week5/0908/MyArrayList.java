@@ -15,8 +15,7 @@ public class MyArrayList<E> {
             resize();
         }
 
-        list[size] = element;
-        size++;
+        list[size++] = element;
 
         return true;
     }
@@ -49,46 +48,6 @@ public class MyArrayList<E> {
         }
 
         return (E) list[index];
-    }
-
-    public void set(int index, E val) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException(
-                "Index " + index + " is out of bounds for size " + size
-            );
-        }
-        list[index] = val;
-    }
-
-    @SuppressWarnings("unchecked")
-    public E remove(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException(
-                "Index: " + index + ", Size: " + size
-            );
-        }
-
-        E removed = (E) list[index];
-
-        for (int i = index; i < size - 1; i++) {
-            list[i] = list[i + 1];
-        }
-
-        list[size - 1] = null;
-        size--;
-
-        return removed;
-    }
-
-    public boolean remove(Object element) {
-        for (int i = 0; i < size; i++) {
-            if (list[i].equals(element)) {
-                remove(i);
-                return true;
-            }
-        }
-
-        return false;
     }
 
     public int size() {
