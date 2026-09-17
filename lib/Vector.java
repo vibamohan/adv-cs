@@ -1,4 +1,4 @@
-public class Vector<E> {
+public class Vector<E> implements VList<E> {
     private Object[] list;
     private int size;
 
@@ -81,7 +81,7 @@ public class Vector<E> {
         return removed;
     }
 
-    public boolean remove(Object element) {
+    public boolean remove(E element) {
         for (int i = 0; i < size; i++) {
             if (list[i].equals(element)) {
                 remove(i);
